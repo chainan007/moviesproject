@@ -3,13 +3,21 @@
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Movie Recommendations</title>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://img.freepik.com/free-vector/super-cinema-background_52683-1698.jpg?w=740&t=st=1688876941~exp=1688877541~hmac=1f014ca6a5d839760992e7ac757920f2c970c9880e99ec0d9bc58d7d9d4173df" alt="" width="200" height="150" class="d-inline-block align-text-top">
+      </a>
+    </div>
+  </nav>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    </style>
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="height: 500;width: 450;">
       <div class="carousel-item active">
         <img src="https://wallpapercave.com/wp/wp5382960.png" class="d-block w-100" alt="...">
       </div>
@@ -95,7 +103,7 @@
           <p>Director: John Doe</p>
           <p>Rating: 8.5/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <div class="movie">
@@ -108,7 +116,7 @@
           <p>Director: Jane Smith</p>
           <p>Rating: 9/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <div class="movie">
@@ -121,7 +129,7 @@
           <p>Director: Michael Johnson</p>
           <p>Rating: 7.8/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <!-- Add more movie recommendations here -->
@@ -139,7 +147,7 @@
           <p>Director: Sarah Thompson</p>
           <p>Rating: 8.2/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <div class="movie">
@@ -152,7 +160,7 @@
           <p>Director: Robert Johnson</p>
           <p>Rating: 9.1/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <div class="movie">
@@ -165,7 +173,7 @@
           <p>Director: Emily Davis</p>
           <p>Rating: 8.7/10</p>
         </div>
-        <button class="like-button">Like</button>
+        <button class="like-button"><img src="./assets/heart_broken.jpg" class="like-icon" alt="Like"></button>
     </div>
   
     <!-- Add more movie recommendations here -->
@@ -205,11 +213,11 @@
         // Update button appearance
         button.classList.toggle("liked");
         
-        // Update button text
+        // Update button text and image
         if (button.classList.contains("liked")) {
-          button.textContent = "Liked";
+          button.innerHTML = '<img src="./assets/heart_broken.jpg" class="like-icon" alt="Liked">';
         } else {
-          button.textContent = "Like";
+          button.innerHTML = '<img src="./assets/heart_red.jpg" class="like-icon" alt="Like">';
         }
       });
     });
