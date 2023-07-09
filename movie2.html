@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Description</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    button {
+      padding: 8px 16px;
+      margin-right: 8px;
+    }
+  </style>
+  <script>
+    function changeTableContent(content) {
+      var table = document.getElementById("contentTable");
+      table.innerHTML = content;
+    }
+  </script>
+</head>
+<body>
+  <h1>Movie Description</h1>
+  
+  <p>A tale of outsized ambition and outrageous excess, it traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood.</p>
+  
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th></tr><tr><td>Movie 1</td><td>Action</td></tr>')">7/9/2566</button>
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th></tr><tr><td>Movie 2</td><td>Drama</td></tr>')">8/9/2566</button>
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th></tr><tr><td>Movie 3</td><td>Comedy</td></tr>')">9/9/2566</button>
+  
+  <table id="contentTable">
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+    </tr>
+  </table>
+</body>
+</html>
