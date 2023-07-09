@@ -68,6 +68,7 @@
           <p>Director: John Doe</p>
           <p>Rating: 8.5/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <div class="movie">
@@ -80,6 +81,7 @@
           <p>Director: Jane Smith</p>
           <p>Rating: 9/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <div class="movie">
@@ -92,6 +94,7 @@
           <p>Director: Michael Johnson</p>
           <p>Rating: 7.8/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <!-- Add more movie recommendations here -->
@@ -109,6 +112,7 @@
           <p>Director: Sarah Thompson</p>
           <p>Rating: 8.2/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <div class="movie">
@@ -121,6 +125,7 @@
           <p>Director: Robert Johnson</p>
           <p>Rating: 9.1/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <div class="movie">
@@ -133,6 +138,7 @@
           <p>Director: Emily Davis</p>
           <p>Rating: 8.7/10</p>
         </div>
+        <button class="like-button">Like</button>
     </div>
   
     <!-- Add more movie recommendations here -->
@@ -163,6 +169,25 @@
         <p>Sponsored Content Description</p>
     </div>
   </div>
-  
+  <script>
+    // JavaScript to handle like button clicks
+    var likeButtons = document.querySelectorAll(".like-button");
+
+    likeButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        // Update button appearance
+        button.classList.toggle("liked");
+        
+        // Update button text
+        if (button.classList.contains("liked")) {
+          button.textContent = "Liked";
+        } else {
+          button.textContent = "Like";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
+
