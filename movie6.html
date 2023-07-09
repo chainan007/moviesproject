@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Description</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Movie Recommendations</title>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DooNung.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="company.html">Company</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    button {
+      padding: 8px 16px;
+      margin-right: 8px;
+    }
+  </style>
+  <script>
+    function changeTableContent(content) {
+      var table = document.getElementById("contentTable");
+      table.innerHTML = content;
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Super Mario Bros The Movie</h1>
+  
+  <img src="https://m.media-amazon.com/images/I/9122Ajm-R6L._AC_UF1000,1000_QL80_.jpg" alt="movie6">
+  
+  <h1>Movie Description</h1>
+  
+  <p>A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover the world above water and impress a prince.</p>
+  
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th><th>Showtime</th></tr><tr><td>Super Mario Bros The Movie</td><td>Animation,Adventure,Comedy</td><td>11:50, 14:20, 19:10</td></tr>')">7/9/2566</button>
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th><th>Showtime</th></tr><tr><td>Super Mario Bros The Movie</td><td>Animation,Adventure,Comedy</td><td>11:30, 14:50, 19:20</td></tr>')">8/9/2566</button>
+  <button onclick="changeTableContent('<tr><th>Title</th><th>Genre</th><th>Showtime</th></tr><tr><td>Super Mario Bros The Movie</td><td>Animation,Adventure,Comedy</td><td>13:50, 17:30</td></tr>')">9/9/2566</button>
+  
+  <table id="contentTable">
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Showtime</th>
+    </tr>
+  </table>
+</body>
+</html>
